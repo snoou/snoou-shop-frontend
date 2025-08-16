@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>پوشاک نسیم </title>
+
+</head>
+
+<body class="bg-gray-50">
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-pink-100">
+        <nav class="max-w-6xl mx-auto px-4 md:px-6">
+            <div class="flex items-center justify-between h-16">
+                <a href="#" class="flex items-center gap-2">
+                    <span class="inline-flex items-center justify-center w-9 h-9 rounded-2xl bg-pink-100">
+                        <span class="font-bold text-pink-600 ">ن</span>
+                    </span>
+                    <span class="text-lg font-extrabold tracking-tight text-pink-600">نسیم</span>
+                </a>
+
+
+                <div class="hidden md:flex flex-1 mx-6">
+                    <label class="relative w-full">
+                        <input type="search" placeholder="جستجو در محصولات..."
+                            class="w-full rounded-xl border border-pink-200/70 focus:border-pink-400 focus:ring-2 focus:ring-pink-200/60 outline-none py-2 pe-10 ps-4 text-sm" />
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            class="w-5 h-5 absolute top-1/2 -translate-y-1/2 end-3 opacity-70">
+                            <path fill="currentColor"
+                                d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16a6.471 6.471 0 0 0 4.23-1.57l.27.28v.79L20 21.49L21.49 20zM9.5 14A4.5 4.5 0 1 1 14 9.5A4.505 4.505 0 0 1 9.5 14" />
+                        </svg>
+                    </label>
+                </div>
+
+                <div class="flex items-center gap-2">
+
+                    <button id="openSearch" class="md:hidden inline-flex p-2 rounded-lg hover:bg-pink-50">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16a6.471 6.471 0 0 0 4.23-1.57l.27.28v.79L20 21.49L21.49 20zM9.5 14A4.5 4.5 0 1 1 14 9.5A4.505 4.505 0 0 1 9.5 14" />
+                        </svg>
+                    </button>
+
+                    <button
+                        class=" sm:inline-flex items-center gap-2 rounded-xl border border-pink-200 px-3 py-2 text-sm hover:bg-pink-50 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M7 18a2 2 0 1 0 0 4a2 2 0 0 0 0-4m10 0a2 2 0 1 0 .001 4A2 2 0 0 0 17 18M7.2 14h9.45a2.5 2.5 0 0 0 2.42-1.87l1.5-6A1.5 1.5 0 0 0 19.12 4H6.3l-.3-1A1.5 1.5 0 0 0 4.55 2H3a1 1 0 0 0 0 2h1.2l3 9a2.5 2.5 0 0 0 2 1" />
+                        </svg>
+                        <span class="hidden md:inline">سبد</span>
+                    </button>
+
+
+                    <button id="menuBtn" class="md:hidden inline-flex p-2 rounded-lg hover:bg-pink-50"
+                        aria-label="باز کردن منو" aria-expanded="false">
+                        <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z" />
+                        </svg>
+                        <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 hidden"
+                            viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M18.3 5.71L12 12l6.3 6.29l-1.41 1.41L12 13.41l-6.29 6.3l-1.41-1.42L10.59 12L3.3 5.71L4.71 4.3L12 11.59L19.29 4.3z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div>
+                <div id="mobileSearch" class="hidden px-2 pt-2">
+                    <label class="relative block">
+                        <input type="search" placeholder="جستجو..."
+                            class="w-full rounded-xl border border-pink-200 focus:border-pink-400 focus:ring-2 focus:ring-pink-200 outline-none py-2 pe-10 ps-4 text-sm" />
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="w-5 h-5 absolute top-1/2 -translate-y-1/2 end-3 opacity-70" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16a6.471 6.471 0 0 0 4.23-1.57l.27.28v.79L20 21.49L21.49 20zM9.5 14A4.5 4.5 0 1 1 14 9.5A4.505 4.505 0 0 1 9.5 14" />
+                        </svg>
+                    </label>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-6xl mx-auto p-6">
+        <div class="">
+            <div
+                class="bg-gradient-to-r from-pink-200 via-pink-100 to-white flex items-center justify-center flex-col py-16 rounded-lg ">
+                <h1 class="text-5xl font-bold my-6 text-pink-500">جدیدترین کالکشن زنانه</h1>
+                <p class="text-pink-600 backdrop-blur bg-gray-50 p-2 px-4 rounded-2xl opacity-70">استایل شیک و خاص خودت
+                    رو پیدا کن</p>
+            </div>
+
+            <div>
+                <h2 class="text-2xl my-6 font-extrabold opacity-70  tracking-tight  ">دسته‌بندی‌ها</h2>
+                <div class="flex items-center flex-col justify-center ">
+                    <div class="flex flex-wrap">
+
+                        <div class="flex flex-1  my-6 flex-col items-center">
+                            <a class="text-center" href="">
+                                <img class="w-44" src="207895350-1-duskypink-removebg-preview.png" alt="لباس زنونه">
+                                <button
+                                    class="p-2 px-4 text-pink-600 font-extrabold rounded-[10px]  bg-gradient-to-r from-pink-200 via-pink-100 to-pink-50 hover:from-pink-500 hover:via-pink-400 hover:to-pink-300 hover:text-white transition-colors ease-in-out duration-200">
+                                    لباس مجلسی
+                                </button>
+                            </a>
+                        </div>
+                        <div class="flex flex-1  my-6 flex-col items-center">
+                            <a class="text-center" href="">
+                                <img class="w-44" src="208711946-1-pink-removebg-preview.png" alt="لباس زنونه">
+                                <button
+                                    class="p-2 px-4 text-pink-600 font-extrabold rounded-[10px]  bg-gradient-to-r from-pink-200 via-pink-100 to-pink-50 hover:from-pink-500 hover:via-pink-400 hover:to-pink-300 hover:text-white transition-colors ease-in-out duration-200">
+                                    لباس خواب
+                                </button>
+                            </a>
+                        </div>
+                        <div class="flex flex-1 my-6 flex-col items-center">
+                            <a class="text-center" href="">
+                                <img class="w-44" src="208711946-1-pink-removebg-preview.png" alt="لباس زنونه">
+                                <button
+                                    class="p-2 px-4 text-pink-600 font-extrabold rounded-[10px]  bg-gradient-to-r from-pink-200 via-pink-100 to-pink-50 hover:from-pink-500 hover:via-pink-400 hover:to-pink-300 hover:text-white transition-colors ease-in-out duration-200">
+                                    لباس خواب
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap">
+
+                        <div class="flex flex-1  my-6 flex-col items-center">
+                            <a class="text-center" href="">
+                                <img class="w-44" src="208711946-1-pink-removebg-preview.png" alt="لباس زنونه">
+                                <button
+                                    class="p-2 px-4 text-pink-600 font-extrabold rounded-[10px]  bg-gradient-to-r from-pink-200 via-pink-100 to-pink-50 hover:from-pink-500 hover:via-pink-400 hover:to-pink-300 hover:text-white transition-colors ease-in-out duration-200">
+                                    لباس خواب
+                                </button>
+                            </a>
+                        </div>
+
+                        <div class="flex flex-1  my-6 flex-col items-center">
+                            <a class="text-center" href="">
+                                <img class="w-44" src="208760688-1-pink-removebg-preview.png" alt="لباس زنونه">
+                                <button
+                                    class="p-2 px-4 text-pink-600 font-extrabold rounded-[10px]  bg-gradient-to-r from-pink-200 via-pink-100 to-pink-50 hover:from-pink-500 hover:via-pink-400 hover:to-pink-300 hover:text-white transition-colors ease-in-out duration-200">
+                                    اسپورت
+                                </button>
+                            </a>
+                        </div>
+                        <div class="flex flex-1  my-6 flex-col items-center">
+                            <a class="text-center" href="">
+                                <img class="w-44 " src="208551820-1-mono-removebg-preview.png" alt="لباس زنونه">
+                                <button
+                                    class="p-2 px-4 text-pink-600 font-extrabold rounded-[10px]  bg-gradient-to-r from-pink-200 via-pink-100 to-pink-50 hover:from-pink-500 hover:via-pink-400 hover:to-pink-300 hover:text-white transition-colors ease-in-out duration-200">
+                                    اکسسوری
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
