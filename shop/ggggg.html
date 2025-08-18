@@ -1,113 +1,0 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>فروشگاه نسیم</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-50 font-sans">
-
-  <!-- 🟢 نوبار (که خودت زدی) -->
-  <header class="border-b bg-white shadow-sm sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
-      <div class="flex items-center gap-2">
-        <span class="text-pink-600 font-extrabold text-xl">نسیم</span>
-      </div>
-      <nav class="hidden md:flex gap-6 text-gray-700">
-        <a href="#" class="hover:text-pink-500">جدیدترین‌ها</a>
-        <a href="#" class="hover:text-pink-500">لباس مجلسی</a>
-        <a href="#" class="hover:text-pink-500">مانتو</a>
-        <a href="#" class="hover:text-pink-500">دسته‌ها</a>
-      </nav>
-      <div class="flex items-center gap-4">
-        <button class="bg-pink-500 text-white px-3 py-1 rounded-lg hover:bg-pink-600">ورود</button>
-        <button class="border px-3 py-1 rounded-lg flex items-center gap-1 hover:bg-gray-100">
-          🛒 <span>سبد</span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- 🟢 Hero Section -->
-  <section class="bg-gradient-to-r from-pink-100 to-pink-50 py-16 px-6 text-center">
-    <h1 class="text-3xl md:text-5xl font-extrabold text-gray-800 mb-4">جدیدترین کالکشن زنانه</h1>
-    <p class="text-gray-600 mb-6">استایل شیک و خاص خودت رو پیدا کن ✨</p>
-    <button class="bg-pink-500 text-white px-6 py-3 rounded-lg text-lg hover:bg-pink-600">مشاهده محصولات</button>
-  </section>
-
-  <!-- 🟢 دسته‌بندی‌ها -->
-  <section class="max-w-7xl mx-auto py-10 px-4">
-    <h2 class="text-2xl font-bold mb-6 text-gray-800">دسته‌بندی‌ها</h2>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg cursor-pointer text-center">
-        👗 <p class="mt-2 font-semibold">لباس مجلسی</p>
-      </div>
-      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg cursor-pointer text-center">
-        🧥 <p class="mt-2 font-semibold">مانتو</p>
-      </div>
-      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg cursor-pointer text-center">
-        👠 <p class="mt-2 font-semibold">کفش</p>
-      </div>
-      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg cursor-pointer text-center">
-        👜 <p class="mt-2 font-semibold">کیف</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 🟢 محصولات -->
-  <section class="max-w-7xl mx-auto py-10 px-4">
-    <h2 class="text-2xl font-bold mb-6 text-gray-800">محصولات جدید</h2>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-      <!-- کارت محصول -->
-      <div class="bg-white shadow rounded-xl overflow-hidden hover:shadow-lg">
-        <img src="https://via.placeholder.com/300x400" class="w-full h-56 object-cover" alt="">
-        <div class="p-4">
-          <h3 class="font-semibold text-gray-800">مانتو تابستانی</h3>
-          <p class="text-pink-600 font-bold">۴۵۰,۰۰۰ تومان</p>
-        </div>
-      </div>
-      <div class="bg-white shadow rounded-xl overflow-hidden hover:shadow-lg">
-        <img src="https://via.placeholder.com/300x400" class="w-full h-56 object-cover" alt="">
-        <div class="p-4">
-          <h3 class="font-semibold text-gray-800">لباس مجلسی</h3>
-          <p class="text-pink-600 font-bold">۸۵۰,۰۰۰ تومان</p>
-        </div>
-      </div>
-      <div class="bg-white shadow rounded-xl overflow-hidden hover:shadow-lg">
-        <img src="https://via.placeholder.com/300x400" class="w-full h-56 object-cover" alt="">
-        <div class="p-4">
-          <h3 class="font-semibold text-gray-800">شومیز</h3>
-          <p class="text-pink-600 font-bold">۳۲۰,۰۰۰ تومان</p>
-        </div>
-      </div>
-      <div class="bg-white shadow rounded-xl overflow-hidden hover:shadow-lg">
-        <img src="https://via.placeholder.com/300x400" class="w-full h-56 object-cover" alt="">
-        <div class="p-4">
-          <h3 class="font-semibold text-gray-800">روسری</h3>
-          <p class="text-pink-600 font-bold">۱۵۰,۰۰۰ تومان</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 🟢 بنر تخفیف -->
-  <section class="bg-pink-500 text-white text-center py-12 px-6">
-    <h2 class="text-3xl font-bold mb-2">حراج ویژه</h2>
-    <p class="mb-4">تا ۵۰٪ تخفیف روی محصولات منتخب</p>
-    <button class="bg-white text-pink-600 px-6 py-3 rounded-lg hover:bg-gray-100">رفتن به حراج</button>
-  </section>
-
-  <!-- 🟢 فوتر -->
-  <footer class="bg-gray-800 text-gray-200 py-6 mt-10">
-    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
-      <p>© 2025 فروشگاه نسیم - همه حقوق محفوظ است.</p>
-      <div class="flex gap-4">
-        <a href="#">📸 اینستاگرام</a>
-        <a href="#">📱 تلگرام</a>
-      </div>
-    </div>
-  </footer>
-
-</body>
-</html>
